@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This is a Next.js project using TypeScript, Tailwind CSS, and the App Router. The app integrates with the Meetups and EventBrite APIs to display events on a map and allows users to create their own events.
