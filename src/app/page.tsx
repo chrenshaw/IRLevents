@@ -65,4 +65,29 @@ export default function HomePage() {
       }
     }
   };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-2xl font-bold mb-4">Event Management</h1>
+      <EventForm onAddEvent={handleAddEvent} />
+      {error && <p className="text-red-500">{error}</p>}
+      <div className="w-full max-w-4xl mt-4">
+        <Map  
+          events={events}
+          onEventClick={(event) => {
+            console.log('Event clicked:', event);
+          }}
+          onMapClick={(coordinates) => {
+            console.log('Map clicked at coordinates:', coordinates);
+          }}
+          onLocationSelected={(location) => {
+            handleAddEvent({ location }, { coordinates: location });
+            console.log('Location selected:', location);
+          }
+        }
+        />
+      </div>
+      
+    </div>
+  )
 }
